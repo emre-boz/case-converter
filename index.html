@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/main.css" />
+  </head>
+  <body>
+    <div class="loader"></div>
+    <div class="container">
+      <div class="inputArea">
+        <textarea
+          id="input"
+          class="section"
+          name=""
+          id=""
+          cols="30"
+          rows="5"
+          placeholder="Your Text"
+          autocomplete="off"
+        ></textarea>
+        <button id="clearButton" class="nonvisible">Clear</button>
+      </div>
+
+      <div class="section convertText">Convert to</div>
+
+      <div class="section select-options">
+        <img src="assets/images/angle-down-solid.svg" alt="" />
+        <select name="caseSelection" id="caseSelection" autocomplete="off">
+          <option class="evenOption" disabled="disabled"></option>
+          <option value="upperCase">Upper Case</option>
+          <option class="evenOption" disabled="disabled"></option>
+          <option value="lowerCase">Lower Case</option>
+          <option class="evenOption" disabled="disabled"></option>
+          <option value="capitalizedCase">Capitalized Case</option>
+          <option class="evenOption" disabled="disabled"></option>
+          <option value="camelCase">Camel Case</option>
+          <option class="evenOption" disabled="disabled"></option>
+          <option value="pascalCase">Pascal Case</option>
+          <option class="evenOption" disabled="disabled"></option>
+          <option value="kebabCase">Kebab Case</option>
+          <option class="evenOption" disabled="disabled"></option>
+          <option value="SnakeCase">Snake Case</option>
+          <option class="evenOption" disabled="disabled"></option>
+          <option value="screamingSnakeCase">Screaming Snake Case</option>
+          <option class="evenOption" disabled="disabled"></option>
+        </select>
+      </div>
+
+      <div class="section case-options">
+        <div class="checkBox">
+          <span
+            >*If you do not make any selection, the operation is done with case
+            rules by default.</span
+          >
+        </div>
+        <div class="checkBox">
+          <input type="checkbox" name="" id="removeNumbers" /><label
+            for="removeNumbers"
+            >Remove Numbers</label
+          >
+        </div>
+
+        <div class="checkBox">
+          <input type="checkbox" name="" id="removeNumberStartCase" /><label
+            for="removeNumberStartCase"
+            >Remove Numbers Start With Rule</label
+          >
+        </div>
+
+        <div class="checkBox">
+          <input type="checkbox" name="" id="reduceCapitalLetters" /><label
+            for="reduceCapitalLetters"
+            >Reduce Capital Letters</label
+          >
+        </div>
+
+        <div class="checkBox">
+          <input
+            type="checkbox"
+            name=""
+            id="reduceCapitalLettersStartCase"
+          /><label for="reduceCapitalLettersStartCase"
+            >Reduce Capital Letters Start With Rule</label
+          >
+        </div>
+      </div>
+
+      <button class="section" id="convertButton">Convert</button>
+
+      <div class="resultArea">
+        <div id="result"></div>
+        <button id="btnCopy" type="button">Copy</button>
+      </div>
+    </div>
+
+    <script src="assets/main.js"></script>
+  </body>
+</html>
